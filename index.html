@@ -41,9 +41,6 @@
         .activity-card:hover {
             transform: scale(1.05);
         }
-        
-        .card-body {
-            flex: 1;
     </style>
 </head>
 
@@ -80,23 +77,23 @@
             <div class="col-md-8">
                 <h3 class="section-title text-center my-4" id="section-title">My Activities</h3>
                 <div class="row justify-content-center my-3">
-                    <div class="col-6 col-md-6">
-                        <div class="card activity-card p-3 mb-4 text-center border border-transparent rounded-4 d-flex flex-column"
+                    <div class="col-6 col-md-6 d-flex">
+                        <div class="card activity-card p-3 mb-4 text-center border border-transparent rounded-4 flex-fill"
                              onmouseenter="addShadow(this)" onmouseleave="removeShadow(this)">
-                            <div class="card-body">
+                            <div class="card-body d-flex flex-column">
                                 <h5 class="card-title">Activity 2</h5>
                                 <p class="card-text"> This website serves as your ultimate guide to exploring the vibrant capital of the Netherlands.</p>
-                                <a href="./Amsterdam/A_index.html" class="btn btn-primary">View</a>
+                                <a href="./Amsterdam/A_index.html" class="btn btn-primary mt-auto">View</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-6 col-md-6">
-                        <div class="card activity-card p-3 mb-4 text-center border border-transparent rounded-4 d-flex flex-column"
+                    <div class="col-6 col-md-6 d-flex">
+                        <div class="card activity-card p-3 mb-4 text-center border border-transparent rounded-4 flex-fill"
                              onmouseenter="addShadow(this)" onmouseleave="removeShadow(this)">
-                            <div class="card-body">
+                            <div class="card-body d-flex flex-column">
                                 <h5 class="card-title">Activity 2</h5>
                                 <p class="card-text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                <a href="#" class="btn btn-primary">View</a>
+                                <a href="#" class="btn btn-primary mt-auto">View</a>
                             </div>
                         </div>
                     </div>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Details</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <body>
+    <div class="container mt-5">
+        <div id="character-details" class="card">
+            <div class="card-body text-center">
+                <h2 class="card-title" id="character-name"></h2>
+                <img id="character-image" class="img-fluid rounded mb-3" alt="Character Image">
+                <p class="card-text" id="character-species"></p>
+                <p class="card-text" id="character-status"></p>
+                <p class="card-text" id="character-origin"></p>
+                <a href="index.html" class="btn btn-primary mt-3">Back to Characters</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        function getUrlParameter(name) {
+            const params = new URLSearchParams(window.location.search);
+            return params.get(name);
+        }
+        const characterId = getUrlParameter('id');
+        async function fetchCharacterDetails(id) {
+            const response = await fetch(`https://rickandmortyapi.com/api/character/${id}`);
+            const character = await response.json();
+            return character;
+        }
+        async function loadCharacterDetails() {
+            const character = await fetchCharacterDetails(characterId);
+            document.getElementById('character-name').innerText = character.name;
+            document.getElementById('character-image').src = character.image;
+            document.getElementById('character-species').innerText = `Species: ${character.species}`;
+            document.getElementById('character-status').innerText = `Status: ${character.status}`;
+            document.getElementById('character-origin').innerText = `Origin: ${character.origin.name}`;
+        }
+        loadCharacterDetails();
+</script>
+</body>
+</html>

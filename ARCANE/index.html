@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Arcane: League of Legends</title>
+    <link href="https://fonts.googleapis.com/css2?family=League+Gothic&family=League+Spartan:wght@100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: "League Spartan", sans-serif;
+        }
+
+        .vidcontainer {
+            height: 100vh;
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .video {
+            width: 4000px;
+            height: 100%;
+            pointer-events: none;
+            margin-left: 50%;
+            transform: translate(-50%);
+        }
+
+        .navbar-brand {
+            font-size: 1.8rem;
+            font-weight: bold;
+            width: 140px;
+            margin: 0 10px;
+        }
+
+        .nav-link {
+            color: white;
+            font-size: 1.2rem;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: #ff4c68;
+        }
+
+        .section-title {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #ff4c68;
+            text-align: center;
+        }
+
+        .card {
+            background-color: rgba(20, 20, 40, 0.9);
+            color: white;
+            border: none;
+            text-align: center;
+            transition: transform 0.3s;
+            height: 350px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            border-radius: 8px;
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card h5,
+        .card p {
+            margin: 10px 0;
+        }
+
+        .btn-custom {
+            background-color: #ff4c68;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            transition: background-color 0.3s;
+        }
+
+        .btn-custom:hover {
+            background-color: #d8435e;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <img src="assets/title.png" class="navbar-brand" href="#">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-link" href="#about">About</a>
+                    <a class="nav-link" href="#champions">Champions</a>
+                    <a class="nav-link" href="#playlist">Playlist</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Video Background -->
+    <div class="vidcontainer">
+        <iframe class="video"
+            src="https://www.youtube.com/embed/DNwDWXTDukY?autoplay=1&mute=1&controls=0&loop=1&playlist=DNwDWXTDukY&rel=0&disablekb=1"
+            title="Arcane Background Video" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <div id="about" class="container my-5">
+        <h1 class="section-title">About Arcane</h1>
+        <h3 class="text-center">
+            Arcane is a visually stunning animated series set in the universe of League of Legends. It explores the
+            delicate
+            balance between the rich city of Piltover and the oppressed underground of Zaun. Follow the origins of
+            iconic
+            champions and uncover the power struggles that shape their destinies.
+        </h3>
+    </div>
+
+    <div id="champions" class="container my-5">
+        <h2 class="section-title">Meet the Champions</h2>
+        <div class="row justify-content-center">
+            <!-- Jinx Card -->
+            <div class="col-md-4">
+                <div class="card p-3 my-3">
+                    <img src="assets/jinx.jpg" alt="Jinx" class="img-fluid">
+                    <h5 class="my-3">Jinx</h5>
+                    <p>The unpredictable and chaotic champion who seeks to spread havoc wherever she goes.</p>
+                </div>
+            </div>
+            <!-- Vi Card -->
+            <div class="col-md-4">
+                <div class="card p-3 my-3">
+                    <img src="assets/vi.jpg" alt="Vi" class="img-fluid">
+                    <h5 class="my-3">Vi</h5>
+                    <p>A fierce enforcer from Zaun, known for her powerful punches and sense of justice.</p>
+                </div>
+            </div>
+            <!-- Jayce Card -->
+            <div class="col-md-4">
+                <div class="card p-3 my-3">
+                    <img src="assets/jayce.webp" alt="Jayce" class="img-fluid">
+                    <h5 class="my-3">Jayce</h5>
+                    <p>The inventor and protector of Piltover, committed to pushing the boundaries of technology.</p>
+                </div>
+            </div>
+            <!-- Viktor Card -->
+            <div class="col-md-4">
+                <div class="card p-3 my-3">
+                    <img src="assets/Viktor.webp" alt="Viktor" class="img-fluid">
+                    <h5 class="my-3">Viktor</h5>
+                    <p>The visionary scientist whose work is driven by a belief in the power of progress and evolution.
+                    </p>
+                </div>
+            </div>
+            <!-- Vander/Warkick Card -->
+            <div class="col-md-4">
+                <div class="card p-3 my-3">
+                    <img src="assets/vander.jpg" alt="Vander/Warkick" class="img-fluid">
+                    <h5 class="my-3">Vander/Warkick</h5>
+                    <p>A father figure to many, Vander protects the streets of Zaun with a strong sense of honor.</p>
+                </div>
+            </div>
+            <!-- Heimerdinger Card -->
+            <div class="col-md-4">
+                <div class="card p-3 my-3">
+                    <img src="assets/heimer.webp" alt="Heimerdinger" class="img-fluid">
+                    <h5 class="my-3">Heimerdinger</h5>
+                    <p>A brilliant scientist and inventor, known for his vast knowledge of technology and innovation.
+                    </p>
+                </div>
+            </div>
+            <!-- Caitlyn Card -->
+            <div class="col-md-4">
+                <div class="card p-3 my-3">
+                    <img src="assets/caitlyn.avif" alt="Caitlyn" class="img-fluid">
+                    <h5 class="my-3">Caitlyn</h5>
+                    <p>The sharp-minded sheriff of Piltover, known for her impeccable skills with a sniper rifle.</p>
+                </div>
+            </div>
+            <!-- Silco Card -->
+            <div class="col-md-4">
+                <div class="card p-3 my-3">
+                    <img src="assets/silco.avif" alt="Silco" class="img-fluid">
+                    <h5 class="my-3">Silco</h5>
+                    <p>A ruthless and ambitious figure in Zaun, Silco seeks to bring about change through power and
+                        manipulation.</p>
+                </div>
+            </div>
+            <!-- Ambessa Card -->
+            <div class="col-md-4">
+                <div class="card p-3 my-3">
+                    <img src="assets/ambessa.webp" alt="Ambessa" class="img-fluid">
+                    <h5 class="my-3">Ambessa</h5>
+                    <p>A powerful leader in Zaun, known for her ruthlessness and cunning political maneuvers.</p>
+                </div>
+            </div>
+            <!-- Ekko Card -->
+            <div class="col-md-4">
+                <div class="card p-3 my-3">
+                    <img src="assets/ekko.jpg" alt="Ekko" class="img-fluid">
+                    <h5 class="my-3">Ekko</h5>
+                    <p>A brilliant inventor from Zaun, Ekko is known for his time-manipulating device, the Z-Drive.</p>
+                </div>
+            </div>
+            <!-- Singed Card -->
+            <div class="col-md-4">
+                <div class="card p-3 my-3">
+                    <img src="assets/singed.jpeg" alt="Singed" class="img-fluid">
+                    <h5 class="my-3">Singed</h5>
+                    <p>A mad scientist and toxicologist, Singed is infamous for his deadly concoctions and experiments.
+                    </p>
+                </div>
+            </div>
+            <!-- Mel Card -->
+            <div class="col-md-4">
+                <div class="card p-3 my-3">
+                    <img src="assets/Mel.webp" alt="Mel" class="img-fluid">
+                    <h5 class="my-3">Mel</h5>
+                    <p>A powerful and influential figure in Piltover, known for her political savvy and strategic mind.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="playlist" class="container my-5">
+        <h2 class="section-title">Official Soundtrack</h2>
+        <p class="text-center">
+            Immerse yourself in the world of Arcane with its epic soundtrack</p>
+        <div class="text-center">
+            <iframe style="border-radius:12px"
+                src="https://open.spotify.com/embed/playlist/37i9dQZF1DX3KVUsNUmJc2?utm_source=generator&theme=0"
+                width="100%" height="352" frameBorder="0" allowfullscreen=""
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"></iframe>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+        </script>
+
+</body>
+
+</html>
